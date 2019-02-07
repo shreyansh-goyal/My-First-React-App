@@ -5,7 +5,7 @@ class Header extends Component{
     render()
     {
         return(
-            <div className="header">My Reads</div>
+            <div className="header">{this.props.headline}</div>
         )
     }
 }

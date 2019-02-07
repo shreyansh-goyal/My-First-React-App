@@ -5,3 +5,115 @@ h1{
     margin:10px 25px;
     font-weight:100;
 }
+.bookshelfbox{
+    flex-wrap:wrap;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+.bookbox{
+    height:250px;
+    width:200px;
+    padding:10px;
+    position:relative;
+}
+.bookbox img{
+    
+    height:200px;
+    width:200px;
+    padding:10px;
+}
+.bookbox p:last-child{
+    color:gray;
+
+}
+.bookbox p{
+    line-height:15px;
+    margin:5px 0;
+}
+.icon{
+border-radius:50px;
+width:50px;
+height:50px;
+position:absolute;
+right:0;
+bottom:40px;
+background:rgb(77, 230, 64) url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+}
+.change-shelf{
+    width:130px;
+    position:absolute;
+    right:-90px;;
+    bottom:-40px;
+    z-index:5;
+}
+.add
+{
+    position:fixed;
+    bottom:6%;
+    right:25%;
+    border-radius:50px;
+    background-color:rgb(77, 230, 64);
+    background-image: url('../assets/plus-xxl.png');
+    background-size:80%;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    height:50px;
+    width:50px;
+
+}
+form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
+form input{
+    width:40%;
+}
+
+.backtolibrary{
+    position:fixed;
+    bottom:6%;
+    right:25%;
+    border-radius:50px;
+
+    background-image: url("../assets/index.png");
+    background-color:rgb(77, 230, 64);
+    background-size:80%;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    height:50px;
+    width:50px;
+}
+.readbtn{
+    border-radius:50px;
+    width:50px;
+    height:50px;
+    position:absolute;
+    left:0;
+    bottom:40px;
+    background:rgb(3, 131, 182) url("../assets/book.png");
+    background-size:cover;
+}
+.bookpage{
+    min-height:800px;
+    width:70%;
+    display:block;
+    margin:30px auto;
+    padding:10px;
+    box-shadow: 5px 5px 30px 10px;
+}
+.bookpage img{
+    width:20%;
+    display:block;
+    margin:0 auto;
+}
+.bookpage p{
+    width:80%;
+    display:block;
+    margin:10px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:20px; 
+}

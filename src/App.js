@@ -1,35 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {getAll} from './bookAPI'
+import {Route} from 'react-router-dom'
 import Header from './header'
 import ShowBook from './Showbook'
+import Search from './Search'
+import GetBooks from './GetBooks'
 class App extends Component {
   state={
-    currentlyReading:{},
-    wantToRead:{},
-    read:{}
-  }
-  componentWillMount()
-  {
-    getAll().then((data)=>{
-      this.setState({
-        currentlyReading:data.filter(e=>e.shelf==='currentlyReading'),
-        wantToRead:data.filter(e=>e.shelf==='wantToRead'),
-        read:data.filter(e=>e.shelf==='read')
-      })
-      console.log(data)
-    })
+    bookToShow:{}
   }
   render() {
     return (
       <div>
-      <Header/>
-      <ShowBook heading="currentlyReading" books={this.state.currentlyReading}/>
-      <ShowBook heading="wantToRead" books={this.state.wantToRead}/>
-      <ShowBook heading="read" books={this.state.read}/>
-      </div>
-    );
+        <Route exact path="/" render={()=>(
+          <div>
+          <Header headline="Book Tracking App"/>
+          <ShowBook heading="currentlyReading" heading2="wantToRead" heading3="read" />
+          </div>
+        )} />
+        <Route  path="/search" render={()=>(
+          <div>
+            <Header headline="Get Books To Your Shelf Form here"/>
+            <GetBooks/>
+          </div>
+        )} />
+        </div>
+        );
   }
 }
 
